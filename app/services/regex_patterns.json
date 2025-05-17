@@ -1,0 +1,189 @@
+{
+    "bajaj allianz": {
+        "non-motor": {
+            "document_type": [
+                "Document\\s*Type[:\\s-]*([\\w\\s]+)",
+                "Type\\s*of\\s*Document[:\\s-]*([\\w\\s]+)"
+            ],
+            "policy_no": [
+                "PolicyNo\\.\\s*([\\w-]+)"
+            ],
+            "ins_company": [
+                "(\\bBajajAllianzGeneralInsuranceCompanyLtd\\b)"
+            ],
+            "ins_branch": [
+                "ContactourPolicyservicingbranchat:([\\s\\S]+?)\\*\\*"
+            ],
+            "issue_date": [
+                "Policy\\s*Issued\\s*On\\s*[:\\s]*(\\d{2}-[A-Z]{3}-\\d{2})"
+            ],
+            "risk_date": [
+                "Period\\s*of\\s*Insurance\\s*From(?:\\d{2}:\\d{2}:\\d{2})?\\s*(\\d{2}-[A-Z]{3}-\\d{2})\\s*To\\s*(\\d{2}-[A-Z]{3}-\\d{2})"
+            ],
+            "risk_end": [
+                "Period\\s*of\\s*Insurance\\s*From(?:\\d{2}:\\d{2}:\\d{2})?\\s*\\d{2}-[A-Z]{3}-\\d{2}\\s*To\\s*(\\d{2}-[A-Z]{3}-\\d{2})"
+            ],
+            "gst_no": [
+                "GSTIN/UIN\\s*([\\w\\d]+)"
+            ],
+            "cust_name": [
+                "Dear\\s*([A-Z][a-zA-Z\\s]+)"
+            ],
+            "cust_address": [
+                "InsuredAddress\\s*([\\s\\S]+?)\\s*BankDetails"
+            ],
+            "state": [
+                "PlaceofSupply/State\\s+\\d{2}-([A-Za-z]+)"
+            ],
+            "policy_type": [
+                "Policy\\s*Type\\s*([\\w\\s\\(\\)-]+?)\\s*Proposal No",
+                "Policy\\s*Type[:\\s-]*([\\w\\s]+)",
+                "Product\\s+([A-Z]+)"
+            ],
+            "product": [
+                "Product\\s+([A-Z]+)"
+            ],
+            "pan_no": [
+                "PanNo\\s*([A-Z]{5}\\d{4}[A-Z])"
+            ],
+            "invoice_no": [
+                "InvoiceNo:\\s*([\\d/]+)"        
+            ],
+            "gst_percentage": [
+                "IntegratedGST\\((\\d+)%\\)"
+            ],
+            "gst_amount": [
+                "IntegratedGST\\(\\d+%\\)\\s*([\\d,]+\\.[\\d]+)"
+            ],
+            "final_premium": [
+                "FinalPremium\\s*([\\d,]+\\.[\\d]+)"
+            ],
+            "base_premium": [
+                "BasePremium\\s*([\\d,]+\\.[\\d]{2}|\\d+)",
+                "BasePremium\\s*([\\d,]+\\.[\\d]{2}|\\d+)\\s*SpecialDiscount"
+            ],
+            "sum_insured": [
+                "AGGREGATELIMITOFINDEMNITYDURINGTHEPOLICYPERIOD\\s*([\\d,]+\\.[\\d]{2}|\\d+)"
+            ],
+            "total_premium": [
+                "Total\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "payment_mode": [
+                "Payment\\s*Detail\\s*([\\w\\s]+?)(?=\\s*\\d)"
+            ]
+        }
+    },
+    "iffco tokio": {
+        "motor": {
+            "document_type": [
+                "Document\\s*Type[:\\s-]*([\\w\\s]+)",
+                "Type\\s*of\\s*Document[:\\s-]*([\\w\\s]+)"
+            ],
+            "policy_no": [
+                "Policy No\\. & Type\\s+(\\d+)"
+            ],
+            "ins_company": [ 
+                "For\\s*(IFFCO\\s+TOKIO\\s+GENERAL\\s+INSURANCE\\s+COMPANY)"
+            ],
+            "ins_branch": [
+                "Policy Issuing Office[:\\-]\\s*-?([\\w\\s,.()\\-]+?)\\s*GSTIN"
+            ],
+            "issue_date": [
+                "Policy\\s*Issued\\s*On\\s*[:\\s]*(\\d{2}-[A-Z]{3}-\\d{4})"
+            ],
+            "risk_date": [
+                "Period of Insurance\\s*(\\d{2}-[A-Za-z]{3}-\\d{4})\\s*to"
+            ],
+            "risk_end": [
+                "Period of Insurance\\s*\\d{2}-[A-Za-z]{3}-\\d{4}\\s*to\\s*(\\d{2}-[A-Za-z]{3}-\\d{4})"
+            ],
+            "gst_no": [
+                "GSTIN[:\\s]*([A-Z0-9]{15})"
+            ],
+            "cust_name": [   
+                "Insured\\s*Name\\s*[:\\s]*([A-Z][a-zA-Z\\s.]+(?:\\s+[A-Z][a-zA-Z\\s.]*)?)\\s*Geographical"
+            ],
+            "cust_address": [    
+                "Invoice\\s*No\\s*[\\w/]+\\s*Accounting\\s*Code\\s*of\\s*Service\\s*\\d+\\s*([\\s\\S]+?)\\s*Insured\\s*State"
+            ],
+            "state": [
+                "Place\\s*of\\s*Supply\\s*([A-Za-z\\s]+?)(?=\\s*GSTIN)"
+            ],
+            "policy_type": [
+                "Policy\\s*Type\\s*([\\w\\s\\(\\)-]+?)\\s*Proposal No"
+            ],
+            "product": [  
+                "Policy\\s*Type\\s*([\\w\\s\\(\\)-]+?)\\s*Proposal No"
+            ],
+            "pan_no": [
+                "PanNo\\s*([A-Z]{5}\\d{4}[A-Z])",
+                "Pan\\s*No\\s*([A-Z]{5}\\d{4}[A-Z])"
+            ],
+            "invoice_no": [
+                "Invoice No\\s*([\\w\\d/]+)"
+            ],
+            "gst_percentage": [
+                "IGST@(\\d+)%"
+            ],
+            "gst_amount": [
+                "IGST@\\d+%\\s*([\\d,]+\\.[\\d]+)"
+            ],
+            "final_premium": [
+                "Total\\s*OD\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "base_premium": [
+                "Basic\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "sum_insured": [
+                "INSURED\\s+DECLARED\\s+VALUE\\s+\\(IDV\\)\\s+\\(in\\s+Rs\\.\\)\\s*Make\\s+[A-Za-z]+\\s+Vehicle\\s+([\\d,]+)"
+            ],
+            "registration": [
+                "Registration\\s*No\\s*([A-Z0-9]+)"
+            ],
+            "rto": [
+                "RTO\\s*Location\\s*[A-Z0-9]+ / ([A-Z]+)"
+            ],
+            "ncb": [
+                "No\\s*Claim\\s*Bonus\\s*(\\d+)"
+            ],
+            "manu_year": [
+                "Year\\s*of\\s*Manufacture\\s*(\\d{4})"
+            ],
+            "engine_no": [
+                "Engine-\\s*Chassis\\s*No\\s*([A-Z0-9]+)\\s*-"
+            ],
+            "chasis_no": [
+                "Engine-\\s*Chassis\\s*No\\s*[A-Z0-9]+\\s*-\\s*([A-Z0-9]+)"  
+            ],
+            "od": [
+                "Total\\s*OD\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "tp": [
+                "Total\\s*TP\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "net": [
+                "Net\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)",
+                "Net\\s*own\\s*Damage\\s*Premium\\s*\\(A\\)\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "total_net": [
+                "Total\\s*Net\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "total_premium": [
+                "Total\\s*OD\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)",
+                "Total\\s*Premium\\s*([\\d,]+\\.[\\d]+|\\d+)"
+            ],
+            "payment_mode": [
+                "Payment\\s*Detail\\s*([\\w\\s]+?)(?=\\s*\\d)"
+            ],
+            "previous_policy_name": [
+                "Pre-Existing Third Party Policy Details\\.\\s*[\\s\\S]*?Insurance Company Name\\s+([A-Za-z\\s]+)(?=\\n|Policy No)"
+            ],
+            "vehicle_makeby": [
+                "Make\\s+(\\w+)"
+            ],
+            "vehicle_model": [
+                "Model & Variant\\s+([\\w\\s-]+)"
+            ]
+        }    
+    }
+}
